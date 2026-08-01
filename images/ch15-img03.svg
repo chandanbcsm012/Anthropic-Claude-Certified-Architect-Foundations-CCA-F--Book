@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <rect x="0" y="0" width="1200" height="700" fill="#fcfcfb"/>
+
+  <text x="600" y="45" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Worst-Case Delay vs. Submission Interval (30-Hour SLA)</text>
+
+  <!-- Legend -->
+  <rect x="790" y="66" width="18" height="18" fill="#2a78d6"/>
+  <text x="814" y="81" font-size="14" fill="#52514e">Fits 30-hour SLA</text>
+  <rect x="970" y="66" width="18" height="18" fill="#e34948"/>
+  <text x="994" y="81" font-size="14" fill="#52514e">Breaches SLA</text>
+
+  <!-- Gridlines -->
+  <line x1="150" y1="510" x2="1100" y2="510" stroke="#e1e0d9" stroke-width="1"/>
+  <line x1="150" y1="410" x2="1100" y2="410" stroke="#e1e0d9" stroke-width="1"/>
+  <line x1="150" y1="210" x2="1100" y2="210" stroke="#e1e0d9" stroke-width="1"/>
+  <line x1="150" y1="110" x2="1100" y2="110" stroke="#e1e0d9" stroke-width="1"/>
+
+  <!-- SLA threshold line at 30 hours -->
+  <line x1="150" y1="310" x2="1100" y2="310" stroke="#e34948" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="1100" y="300" text-anchor="end" font-size="14" font-weight="bold" fill="#e34948">30-hour SLA</text>
+
+  <!-- Axes -->
+  <line x1="150" y1="610" x2="1100" y2="610" stroke="#898781" stroke-width="2"/>
+  <line x1="150" y1="610" x2="150" y2="110" stroke="#898781" stroke-width="2"/>
+
+  <!-- Y ticks -->
+  <g font-size="13" fill="#52514e">
+    <text x="140" y="615" text-anchor="end">0h</text>
+    <text x="140" y="515" text-anchor="end">10h</text>
+    <text x="140" y="415" text-anchor="end">20h</text>
+    <text x="140" y="315" text-anchor="end">30h</text>
+    <text x="140" y="215" text-anchor="end">40h</text>
+    <text x="140" y="115" text-anchor="end">50h</text>
+  </g>
+  <text x="55" y="360" text-anchor="middle" font-size="15" fill="#52514e" transform="rotate(-90, 55, 360)">Worst-Case Delay (hours)</text>
+
+  <!-- Bars: interval, worst-case delay, fits? -->
+  <!-- 2h -> 26h, fits -->
+  <rect x="195" y="350" width="100" height="260" fill="#2a78d6" rx="4"/>
+  <text x="245" y="338" text-anchor="middle" font-size="14" font-weight="bold" fill="#52514e">26h</text>
+  <text x="245" y="632" text-anchor="middle" font-size="14" fill="#52514e">2h</text>
+
+  <!-- 4h -> 28h, fits -->
+  <rect x="385" y="330" width="100" height="280" fill="#2a78d6" rx="4"/>
+  <text x="435" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#52514e">28h</text>
+  <text x="435" y="632" text-anchor="middle" font-size="14" fill="#52514e">4h</text>
+
+  <!-- 6h -> 30h, fits exactly -->
+  <rect x="575" y="310" width="100" height="300" fill="#2a78d6" rx="4"/>
+  <text x="625" y="298" text-anchor="middle" font-size="14" font-weight="bold" fill="#52514e">30h</text>
+  <text x="625" y="632" text-anchor="middle" font-size="14" fill="#52514e">6h</text>
+
+  <!-- 8h -> 32h, breach -->
+  <rect x="765" y="290" width="100" height="320" fill="#e34948" rx="4"/>
+  <text x="815" y="278" text-anchor="middle" font-size="14" font-weight="bold" fill="#52514e">32h</text>
+  <text x="815" y="632" text-anchor="middle" font-size="14" fill="#52514e">8h</text>
+
+  <!-- 24h -> 48h, breach -->
+  <rect x="955" y="130" width="100" height="480" fill="#e34948" rx="4"/>
+  <text x="1005" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="#52514e">48h</text>
+  <text x="1005" y="632" text-anchor="middle" font-size="14" fill="#52514e">24h</text>
+
+  <text x="625" y="668" text-anchor="middle" font-size="15" fill="#52514e">Submission Interval</text>
+</svg>

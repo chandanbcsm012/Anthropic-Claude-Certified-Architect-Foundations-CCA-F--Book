@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="700" fill="#fcfcfb"/>
+
+  <text x="600" y="45" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Hybrid Architecture: Sync and Batch in One Product</text>
+
+  <!-- Top: shared product -->
+  <rect x="430" y="90" width="340" height="90" rx="12" fill="#2a78d6"/>
+  <text x="600" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">SaaS Product</text>
+  <text x="600" y="156" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">(same model family)</text>
+
+  <!-- Branch arrows from product -->
+  <path d="M 520 180 L 315 278" fill="none" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 680 180 L 885 278" fill="none" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Left column: Live Chat -->
+  <rect x="120" y="280" width="380" height="110" rx="12" fill="#eb6834"/>
+  <text x="310" y="326" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Live Chat Feature</text>
+  <text x="310" y="354" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">User is actively waiting</text>
+
+  <line x1="310" y1="390" x2="310" y2="440" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="440" width="380" height="110" rx="12" fill="#1baf7a"/>
+  <text x="310" y="486" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Synchronous API</text>
+  <text x="310" y="514" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Response in seconds</text>
+
+  <line x1="310" y1="550" x2="310" y2="600" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="310" y="630" text-anchor="middle" font-size="14" fill="#52514e">User sees reply immediately</text>
+
+  <!-- Right column: Nightly Analytics -->
+  <rect x="700" y="280" width="380" height="110" rx="12" fill="#eda100"/>
+  <text x="890" y="326" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Nightly Analytics Job</text>
+  <text x="890" y="354" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Nobody watching in real time</text>
+
+  <line x1="890" y1="390" x2="890" y2="440" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="440" width="380" height="110" rx="12" fill="#e87ba4"/>
+  <text x="890" y="486" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Batch API</text>
+  <text x="890" y="514" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Processes overnight, 50% cheaper</text>
+
+  <line x1="890" y1="550" x2="890" y2="600" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="890" y="630" text-anchor="middle" font-size="14" fill="#52514e">Dashboard ready next morning</text>
+
+  <!-- Bottom note -->
+  <text x="600" y="670" text-anchor="middle" font-size="15" fill="#52514e">Same codebase, same model family — routed per workload, not per product</text>
+</svg>

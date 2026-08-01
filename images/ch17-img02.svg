@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <!-- background -->
+  <rect x="0" y="0" width="1200" height="380" fill="#fcfcfb"/>
+
+  <!-- title -->
+  <text x="600" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Escalation Calibration Spectrum</text>
+
+  <!-- end labels -->
+  <text x="267" y="200" text-anchor="middle" font-size="18" font-weight="bold" fill="#e34948">Over-escalation</text>
+  <text x="933" y="200" text-anchor="middle" font-size="18" font-weight="bold" fill="#2a78d6">Under-escalation</text>
+
+  <!-- bracket marking the centered calibrated zone -->
+  <path d="M434,205 L434,193 L766,193 L766,205" fill="none" stroke="#52514e" stroke-width="2"/>
+  <text x="600" y="182" text-anchor="middle" font-size="13" fill="#52514e">escalate only on the three valid triggers</text>
+
+  <!-- horizontal spectrum track (flat color bands, clipped to rounded ends) -->
+  <defs>
+    <clipPath id="track17-2">
+      <rect x="100" y="220" width="1000" height="90" rx="12"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#track17-2)">
+    <rect x="100" y="220" width="334" height="90" fill="#f4b6b6"/>
+    <rect x="434" y="220" width="332" height="90" fill="#008300"/>
+    <rect x="766" y="220" width="334" height="90" fill="#aac9ef"/>
+  </g>
+  <rect x="100" y="220" width="1000" height="90" rx="12" fill="none" stroke="#52514e" stroke-width="2"/>
+
+  <!-- calibrated zone label, inside the green band -->
+  <text x="600" y="271" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Calibrated</text>
+
+  <!-- supporting captions under the outer bands -->
+  <text x="267" y="335" text-anchor="middle" font-size="13" fill="#52514e">Solvable cases sent to humans</text>
+  <text x="933" y="335" text-anchor="middle" font-size="13" fill="#52514e">Human judgment cases handled alone</text>
+</svg>

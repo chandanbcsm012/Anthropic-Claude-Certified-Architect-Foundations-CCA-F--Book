@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <defs>
+    <marker id="arrow02" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="600" fill="#fcfcfb"/>
+
+  <text x="600" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Two-Job CI/CD Pipeline: Independent Generation and Review</text>
+
+  <!-- job tags -->
+  <text x="135" y="130" text-anchor="middle" font-size="12" font-weight="600" fill="#52514e">JOB 1</text>
+  <text x="550" y="110" text-anchor="middle" font-size="12" font-weight="600" fill="#52514e">JOB 2 — fresh Claude session</text>
+
+  <!-- 1. Generate Job -->
+  <rect x="40" y="140" width="190" height="90" rx="12" fill="#2a78d6"/>
+  <text x="135" y="178" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Generate Job</text>
+  <text x="135" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">claude -p "implement…"</text>
+  <text x="135" y="252" text-anchor="middle" font-size="11" fill="#52514e">--allowedTools Read,Write,Edit</text>
+
+  <!-- 2. diff artifact -->
+  <rect x="270" y="160" width="110" height="50" rx="12" fill="#eb6834"/>
+  <text x="325" y="190" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">diff</text>
+  <text x="325" y="228" text-anchor="middle" font-size="11" fill="#52514e">git diff origin/main...HEAD</text>
+
+  <!-- 3. Review Job (container) -->
+  <rect x="420" y="120" width="260" height="130" rx="12" fill="#1baf7a"/>
+  <text x="550" y="148" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Review Job</text>
+  <text x="550" y="166" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">(needs: generate)</text>
+  <text x="550" y="190" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">fresh session, no --resume</text>
+  <text x="550" y="208" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">allowedTools: Read, Grep</text>
+  <text x="550" y="226" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">reads CLAUDE.md + diff cold</text>
+
+  <!-- 4. CLAUDE.md input, feeding up into Review Job -->
+  <rect x="420" y="300" width="260" height="80" rx="12" fill="#eda100"/>
+  <text x="550" y="332" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">CLAUDE.md</text>
+  <text x="550" y="354" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">testing standards + review criteria</text>
+  <text x="550" y="398" text-anchor="middle" font-size="11" fill="#52514e">(read independently by the review job)</text>
+
+  <!-- 5. JSON Findings -->
+  <rect x="730" y="140" width="200" height="90" rx="12" fill="#e87ba4"/>
+  <text x="830" y="178" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">JSON Findings</text>
+  <text x="830" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">schema-constrained</text>
+  <text x="830" y="252" text-anchor="middle" font-size="11" fill="#52514e">--output-format json + schema</text>
+
+  <!-- 6. Post Findings step -->
+  <rect x="970" y="140" width="190" height="90" rx="12" fill="#008300"/>
+  <text x="1065" y="178" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Post Findings</text>
+  <text x="1065" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">(inline PR comments)</text>
+  <text x="1065" y="252" text-anchor="middle" font-size="11" fill="#52514e">post-inline-comments.js</text>
+
+  <!-- 7. Pull Request with inline comments -->
+  <rect x="950" y="330" width="230" height="210" rx="12" fill="#4a3aa7"/>
+  <text x="1065" y="358" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Pull Request</text>
+  <text x="1065" y="378" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">inline review comments</text>
+  <rect x="970" y="392" width="190" height="120" rx="8" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="982" y="415" font-size="10" fill="#ffffff">+ input validated</text>
+  <text x="982" y="437" font-size="10" fill="#ffffff">  (unchanged context)</text>
+  <text x="982" y="459" font-size="10" fill="#ffffff">+ missing null check</text>
+  <text x="982" y="481" font-size="10" fill="#ffffff">+ new query, no index</text>
+  <!-- inline comment bubbles pointing at flagged lines -->
+  <path d="M1140,450 h14 a4,4 0 0 1 4,4 v6 a4,4 0 0 1 -4,4 h-6 l-4,5 v-5 h0 a4,4 0 0 1 -4,-4 v-6 a4,4 0 0 1 4,-4 z" fill="#ffffff"/>
+  <path d="M1140,472 h14 a4,4 0 0 1 4,4 v6 a4,4 0 0 1 -4,4 h-6 l-4,5 v-5 h0 a4,4 0 0 1 -4,-4 v-6 a4,4 0 0 1 4,-4 z" fill="#ffffff"/>
+
+  <!-- arrows: main left-to-right chain (all centered at y=185) -->
+  <line x1="230" y1="185" x2="266" y2="185" stroke="#52514e" stroke-width="2" marker-end="url(#arrow02)"/>
+  <line x1="380" y1="185" x2="416" y2="185" stroke="#52514e" stroke-width="2" marker-end="url(#arrow02)"/>
+  <line x1="680" y1="185" x2="726" y2="185" stroke="#52514e" stroke-width="2" marker-end="url(#arrow02)"/>
+  <line x1="930" y1="185" x2="966" y2="185" stroke="#52514e" stroke-width="2" marker-end="url(#arrow02)"/>
+
+  <!-- arrow: CLAUDE.md up into Review Job -->
+  <line x1="550" y1="296" x2="550" y2="254" stroke="#52514e" stroke-width="2" marker-end="url(#arrow02)"/>
+
+  <!-- arrow: Post Findings down into Pull Request -->
+  <line x1="1065" y1="234" x2="1065" y2="326" stroke="#52514e" stroke-width="2" marker-end="url(#arrow02)"/>
+</svg>

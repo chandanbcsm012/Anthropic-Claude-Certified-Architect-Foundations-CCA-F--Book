@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="500" fill="#fcfcfb"/>
+
+  <text x="600" y="34" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Schema Field Design Decision Flow</text>
+
+  <!-- Top box -->
+  <rect x="400" y="60" width="400" height="50" rx="12" fill="#2a78d6"/>
+  <text x="600" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">For each field in your schema, ask:</text>
+
+  <!-- Branch arrows -->
+  <line x1="460" y1="110" x2="310" y2="168" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="740" y1="110" x2="890" y2="168" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Q1 box (left) -->
+  <rect x="40" y="170" width="540" height="65" rx="12" fill="#eb6834"/>
+  <text x="310" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Q1: Is this field guaranteed present</text>
+  <text x="310" y="216" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">in every source document?</text>
+
+  <!-- Q2 box (right) -->
+  <rect x="620" y="170" width="540" height="65" rx="12" fill="#1baf7a"/>
+  <text x="890" y="196" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Q2 (for enum fields): Is the fixed set</text>
+  <text x="890" y="216" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">of values genuinely exhaustive?</text>
+
+  <!-- Arrows from Q1 to its two outcomes -->
+  <line x1="165" y1="235" x2="165" y2="310" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="455" y1="235" x2="455" y2="310" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Q1 outcome boxes -->
+  <rect x="40" y="310" width="250" height="70" rx="12" fill="#eda100"/>
+  <text x="165" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Always present</text>
+  <text x="165" y="358" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">&#8594; mark required</text>
+
+  <rect x="330" y="310" width="250" height="70" rx="12" fill="#e87ba4"/>
+  <text x="455" y="338" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Not always present</text>
+  <text x="455" y="358" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">&#8594; optional or nullable</text>
+
+  <!-- Arrows from Q2 to its three outcomes -->
+  <line x1="703" y1="235" x2="703" y2="310" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="889" y1="235" x2="889" y2="310" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1076" y1="235" x2="1076" y2="310" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Q2 outcome boxes -->
+  <rect x="620" y="310" width="166" height="70" rx="12" fill="#008300"/>
+  <text x="703" y="338" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Exhaustive &amp; clear</text>
+  <text x="703" y="356" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">&#8594; plain enum</text>
+
+  <rect x="806" y="310" width="166" height="70" rx="12" fill="#4a3aa7"/>
+  <text x="889" y="338" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Genuine ambiguity</text>
+  <text x="889" y="356" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">&#8594; add "unclear"</text>
+
+  <rect x="992" y="310" width="168" height="70" rx="12" fill="#e34948"/>
+  <text x="1076" y="338" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Outside taxonomy</text>
+  <text x="1076" y="356" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">&#8594; "other" + detail</text>
+
+  <!-- Closing annotation -->
+  <text x="600" y="425" text-anchor="middle" font-size="14" fill="#52514e">Once every state — present, absent, ambiguous, or out-of-taxonomy — has a valid representation,</text>
+  <text x="600" y="449" text-anchor="middle" font-size="14" fill="#52514e">there is no pressure left for the model to fabricate.</text>
+</svg>

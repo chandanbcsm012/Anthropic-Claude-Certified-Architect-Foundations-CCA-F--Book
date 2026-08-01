@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <defs>
+    <marker id="arrow03" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="760" fill="#fcfcfb"/>
+
+  <!-- Title -->
+  <text x="600" y="48" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">From Scoping Process to Enforced Configuration</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="110" width="250" height="120" rx="12" fill="#2a78d6"/>
+  <text x="165" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">STEP 1</text>
+  <text x="165" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">State the job</text>
+  <text x="165" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">in one sentence</text>
+
+  <!-- Step 2 -->
+  <rect x="330" y="110" width="250" height="120" rx="12" fill="#eb6834"/>
+  <text x="455" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">STEP 2</text>
+  <text x="455" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">List tools that</text>
+  <text x="455" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">are required</text>
+
+  <!-- Step 3 -->
+  <rect x="620" y="110" width="250" height="120" rx="12" fill="#1baf7a"/>
+  <text x="745" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">STEP 3</text>
+  <text x="745" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Remove tools</text>
+  <text x="745" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">owned elsewhere</text>
+
+  <!-- Step 4 -->
+  <rect x="910" y="110" width="250" height="120" rx="12" fill="#eda100"/>
+  <text x="1035" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">STEP 4</text>
+  <text x="1035" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Document the</text>
+  <text x="1035" y="192" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">final scope</text>
+
+  <!-- Arrows between steps -->
+  <line x1="290" y1="170" x2="326" y2="170" stroke="#52514e" stroke-width="2" marker-end="url(#arrow03)"/>
+  <line x1="580" y1="170" x2="616" y2="170" stroke="#52514e" stroke-width="2" marker-end="url(#arrow03)"/>
+  <line x1="870" y1="170" x2="906" y2="170" stroke="#52514e" stroke-width="2" marker-end="url(#arrow03)"/>
+
+  <!-- Arrow from Step 4 down into MCP configuration -->
+  <line x1="1035" y1="230" x2="1035" y2="290" stroke="#52514e" stroke-width="2"/>
+  <line x1="1035" y1="290" x2="620" y2="290" stroke="#52514e" stroke-width="2"/>
+  <line x1="620" y1="290" x2="620" y2="356" stroke="#52514e" stroke-width="2" marker-end="url(#arrow03)"/>
+  <text x="1035" y="255" text-anchor="middle" font-size="12" fill="#52514e">produces a</text>
+  <text x="1035" y="270" text-anchor="middle" font-size="12" fill="#52514e">documented decision</text>
+
+  <!-- MCP Configuration box -->
+  <rect x="350" y="360" width="500" height="140" rx="12" fill="#e87ba4"/>
+  <text x="600" y="405" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Project-Level MCP Configuration</text>
+  <text x="600" y="430" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">(.mcp.json)</text>
+  <text x="600" y="465" text-anchor="middle" font-size="13" fill="#ffffff">declares allowedTools per agent/server</text>
+  <text x="600" y="484" text-anchor="middle" font-size="13" fill="#ffffff">version-controlled &amp; reviewable in a pull request</text>
+
+  <!-- Arrow from config down to enforced boundary -->
+  <line x1="600" y1="500" x2="600" y2="556" stroke="#52514e" stroke-width="2" marker-end="url(#arrow03)"/>
+  <text x="720" y="530" text-anchor="start" font-size="12" fill="#52514e">reviewed like any</text>
+  <text x="720" y="546" text-anchor="start" font-size="12" fill="#52514e">other code change</text>
+
+  <!-- Enforced Tool Boundary box -->
+  <rect x="400" y="560" width="400" height="120" rx="12" fill="#008300"/>
+  <text x="600" y="605" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Enforced Tool Boundary</text>
+  <text x="600" y="630" text-anchor="middle" font-size="13" fill="#ffffff">a structural guarantee, not a convention</text>
+  <text x="600" y="652" text-anchor="middle" font-size="13" fill="#ffffff">an agent has no path to reach an out-of-scope tool</text>
+</svg>

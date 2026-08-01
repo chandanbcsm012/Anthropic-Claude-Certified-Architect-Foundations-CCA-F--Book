@@ -1,0 +1,61 @@
+<svg viewBox="0 0 1200 660" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="660" fill="#fcfcfb"/>
+
+  <text x="600" y="34" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Two Paths for a Required Field With No Source Value</text>
+
+  <!-- Top box -->
+  <rect x="370" y="60" width="460" height="55" rx="12" fill="#2a78d6"/>
+  <text x="600" y="93" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Required field, no matching source value</text>
+
+  <!-- Branch arrows from top -->
+  <line x1="460" y1="115" x2="270" y2="168" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="740" y1="115" x2="930" y2="168" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LEFT branch: omit -->
+  <rect x="90" y="170" width="340" height="55" rx="12" fill="#eb6834"/>
+  <text x="260" y="203" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Omit the field</text>
+
+  <line x1="260" y1="225" x2="260" y2="280" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="280" width="340" height="55" rx="12" fill="#eda100"/>
+  <text x="260" y="313" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Schema-invalid</text>
+
+  <line x1="260" y1="335" x2="260" y2="390" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="390" width="340" height="55" rx="12" fill="#008300"/>
+  <text x="260" y="423" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">API rejects the response</text>
+
+  <!-- Red X annotation next to rejection -->
+  <circle cx="450" cy="417" r="15" fill="#e34948"/>
+  <text x="450" y="422" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">&#10005;</text>
+
+  <!-- RIGHT branch: fabricate -->
+  <rect x="770" y="170" width="340" height="55" rx="12" fill="#1baf7a"/>
+  <text x="940" y="203" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Produce a value anyway</text>
+
+  <line x1="940" y1="225" x2="940" y2="280" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="770" y="280" width="340" height="55" rx="12" fill="#e87ba4"/>
+  <text x="940" y="313" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Schema-valid</text>
+
+  <line x1="940" y1="335" x2="940" y2="390" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="770" y="390" width="340" height="55" rx="12" fill="#4a3aa7"/>
+  <text x="940" y="423" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">API accepts the response</text>
+
+  <line x1="940" y1="445" x2="940" y2="500" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="770" y="500" width="340" height="65" rx="12" fill="#e34948"/>
+  <text x="940" y="527" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Fabricated value</text>
+  <text x="940" y="547" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">enters your system</text>
+
+  <!-- Closing annotation -->
+  <text x="600" y="610" text-anchor="middle" font-size="15" fill="#52514e">A schema-valid response is not the same guarantee as a truthful response.</text>
+  <text x="600" y="634" text-anchor="middle" font-size="15" fill="#52514e">Given these two paths, the model always resolves the conflict in favor of validity.</text>
+</svg>

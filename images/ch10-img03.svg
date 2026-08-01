@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  </style>
+  <defs>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="520" fill="#fcfcfb"/>
+
+  <text x="600" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Choosing the Right Mechanism</text>
+
+  <!-- Central decision node -->
+  <rect x="470" y="80" width="260" height="70" rx="12" fill="#ffffff" stroke="#52514e" stroke-width="2"/>
+  <text x="600" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b0b0b">What triggers</text>
+  <text x="600" y="132" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b0b0b">this instruction?</text>
+
+  <!-- Branch lines -->
+  <line x1="600" y1="150" x2="168" y2="296" stroke="#52514e" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="600" y1="150" x2="384" y2="296" stroke="#52514e" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="600" y1="150" x2="600" y2="296" stroke="#52514e" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="600" y1="150" x2="816" y2="296" stroke="#52514e" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="600" y1="150" x2="1032" y2="296" stroke="#52514e" stroke-width="2" marker-end="url(#arrow3)"/>
+
+  <!-- Condition labels -->
+  <text x="168" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#52514e">Always applies</text>
+  <text x="384" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#52514e">An event occurs</text>
+  <text x="600" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#52514e">Topic-relevant</text>
+  <text x="816" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#52514e">Needs delegation</text>
+  <text x="1032" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#52514e">External access</text>
+
+  <!-- Outcome boxes -->
+  <rect x="73" y="300" width="190" height="110" rx="12" fill="#2a78d6"/>
+  <text x="168" y="362" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">CLAUDE.md</text>
+
+  <rect x="289" y="300" width="190" height="110" rx="12" fill="#eb6834"/>
+  <text x="384" y="362" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Hook</text>
+
+  <rect x="505" y="300" width="190" height="110" rx="12" fill="#1baf7a"/>
+  <text x="600" y="362" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Skill</text>
+
+  <rect x="721" y="300" width="190" height="110" rx="12" fill="#eda100"/>
+  <text x="816" y="362" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Subagent</text>
+
+  <rect x="937" y="300" width="190" height="110" rx="12" fill="#e87ba4"/>
+  <text x="1032" y="362" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">MCP Server</text>
+
+  <!-- Effect annotations -->
+  <text x="168" y="435" text-anchor="middle" font-size="12" fill="#52514e">Establishes always-on</text>
+  <text x="168" y="452" text-anchor="middle" font-size="12" fill="#52514e">rules and constraints</text>
+
+  <text x="384" y="435" text-anchor="middle" font-size="12" fill="#52514e">Automates a response —</text>
+  <text x="384" y="452" text-anchor="middle" font-size="12" fill="#52514e">blocks, corrects, or logs</text>
+
+  <text x="600" y="435" text-anchor="middle" font-size="12" fill="#52514e">Adds specialized knowledge</text>
+  <text x="600" y="452" text-anchor="middle" font-size="12" fill="#52514e">to the current conversation</text>
+
+  <text x="816" y="435" text-anchor="middle" font-size="12" fill="#52514e">Runs independent work</text>
+  <text x="816" y="452" text-anchor="middle" font-size="12" fill="#52514e">in a separate context</text>
+
+  <text x="1032" y="435" text-anchor="middle" font-size="12" fill="#52514e">Connects to external</text>
+  <text x="1032" y="452" text-anchor="middle" font-size="12" fill="#52514e">systems and APIs</text>
+</svg>

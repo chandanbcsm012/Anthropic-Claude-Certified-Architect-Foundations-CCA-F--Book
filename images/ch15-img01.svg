@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="620" fill="#fcfcfb"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">The One-Question API Decision Test</text>
+
+  <!-- Decision question box -->
+  <rect x="380" y="100" width="440" height="120" rx="12" fill="#2a78d6"/>
+  <text x="600" y="150" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Is something actively waiting</text>
+  <text x="600" y="176" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">on this response right now?</text>
+
+  <!-- Branch arrows -->
+  <path d="M 470 220 L 305 345" fill="none" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 730 220 L 895 345" fill="none" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="358" y="268" text-anchor="middle" font-size="16" font-weight="bold" fill="#52514e">YES</text>
+  <text x="842" y="268" text-anchor="middle" font-size="16" font-weight="bold" fill="#52514e">NO</text>
+
+  <!-- Sync branch -->
+  <rect x="80" y="350" width="440" height="190" rx="12" fill="#eb6834"/>
+  <text x="300" y="392" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">Use the Synchronous API</text>
+  <text x="300" y="428" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Caller blocks and waits</text>
+  <text x="300" y="453" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Live chat, workflow gates,</text>
+  <text x="300" y="478" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">agent loops, real-time decisions</text>
+  <text x="300" y="508" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Cost is fixed for this traffic</text>
+
+  <!-- Batch branch -->
+  <rect x="680" y="350" width="440" height="190" rx="12" fill="#1baf7a"/>
+  <text x="900" y="392" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">Evaluate the Batch API</text>
+  <text x="900" y="428" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Submit and disconnect</text>
+  <text x="900" y="453" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Deadline is hours away,</text>
+  <text x="900" y="478" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">not immediate</text>
+  <text x="900" y="508" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Flat 50% token discount</text>
+</svg>

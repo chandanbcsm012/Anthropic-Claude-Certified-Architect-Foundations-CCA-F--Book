@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect x="0" y="0" width="1200" height="700" fill="#fcfcfb"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Lost in the Middle: Retrieval Accuracy by Position</text>
+
+  <!-- Axes -->
+  <line x1="150" y1="100" x2="150" y2="550" stroke="#898781" stroke-width="2"/>
+  <line x1="150" y1="550" x2="1100" y2="550" stroke="#898781" stroke-width="2"/>
+
+  <!-- Y axis label and scale hints -->
+  <text x="55" y="325" text-anchor="middle" font-size="16" fill="#52514e" transform="rotate(-90 55 325)">Retrieval accuracy</text>
+  <text x="130" y="185" text-anchor="end" font-size="13" fill="#52514e">High</text>
+  <text x="130" y="425" text-anchor="end" font-size="13" fill="#52514e">Low</text>
+
+  <!-- X axis label and position hints -->
+  <text x="625" y="605" text-anchor="middle" font-size="16" fill="#52514e">Position in context (start &#8594; end)</text>
+  <text x="150" y="572" text-anchor="middle" font-size="13" fill="#52514e">Start</text>
+  <text x="625" y="572" text-anchor="middle" font-size="13" fill="#52514e">Middle</text>
+  <text x="1100" y="572" text-anchor="middle" font-size="13" fill="#52514e">End</text>
+
+  <!-- U-shaped retrieval accuracy curve -->
+  <path d="M150,180 C280,180 340,420 625,420 C910,420 970,180 1100,180" fill="none" stroke="#2a78d6" stroke-width="2"/>
+
+  <!-- Data point markers at start, middle, end -->
+  <circle cx="150" cy="180" r="5" fill="#2a78d6"/>
+  <circle cx="625" cy="420" r="5" fill="#2a78d6"/>
+  <circle cx="1100" cy="180" r="5" fill="#2a78d6"/>
+</svg>

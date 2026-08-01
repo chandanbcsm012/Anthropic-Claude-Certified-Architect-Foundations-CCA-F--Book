@@ -1,0 +1,37 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <defs>
+    <marker id="arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="800" fill="#fcfcfb"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="26" font-weight="bold" fill="#0b0b0b">The Four CLAUDE.md Scopes</text>
+  <text x="600" y="78" text-anchor="middle" font-size="14" fill="#52514e">Stacked like transparencies — broadest at the base, most personal on top</text>
+
+  <!-- Vertical guide arrow -->
+  <line x1="70" y1="645" x2="70" y2="150" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="45" y="660" text-anchor="middle" font-size="12" fill="#52514e" transform="rotate(-90 45 660)">Base</text>
+  <text x="45" y="140" text-anchor="middle" font-size="12" fill="#52514e" transform="rotate(-90 45 140)">Top</text>
+
+  <!-- User-level (top, narrowest) -->
+  <rect x="320" y="140" width="560" height="90" rx="12" fill="#eda100"/>
+  <text x="600" y="192" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">User-Level</text>
+  <text x="600" y="252" text-anchor="middle" font-size="13" fill="#52514e">Local only, never shared — a personal overlay applied on top of everything else</text>
+
+  <!-- Directory-level -->
+  <rect x="230" y="280" width="740" height="90" rx="12" fill="#1baf7a"/>
+  <text x="600" y="332" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Directory-Level</text>
+  <text x="600" y="392" text-anchor="middle" font-size="13" fill="#52514e">Loads on demand — adds detail only in the folder Claude is working in</text>
+
+  <!-- Project-level -->
+  <rect x="160" y="420" width="880" height="90" rx="12" fill="#eb6834"/>
+  <text x="600" y="472" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Project-Level</text>
+  <text x="600" y="532" text-anchor="middle" font-size="13" fill="#52514e">Committed to version control — the shared baseline for the whole repository</text>
+
+  <!-- Managed (base, widest) -->
+  <rect x="100" y="560" width="1000" height="90" rx="12" fill="#2a78d6"/>
+  <text x="600" y="612" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Managed (Org-Wide)</text>
+  <text x="600" y="672" text-anchor="middle" font-size="13" fill="#52514e">Distributed by IT/admin tooling — applies to everyone and cannot be overridden</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <rect width="1200" height="760" fill="#fcfcfb"/>
+
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Choosing a Context Fork Subagent Type</text>
+
+  <!-- CARD 1: Explore -->
+  <g>
+    <rect x="60" y="90" width="340" height="600" rx="12" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+    <rect x="60" y="90" width="340" height="58" rx="12" fill="#2a78d6"/>
+    <rect x="60" y="136" width="340" height="12" fill="#2a78d6"/>
+    <text x="230" y="126" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Explore Agent</text>
+
+    <text x="85" y="178" font-size="13" font-weight="bold" fill="#0b0b0b">Toolset</text>
+    <text x="85" y="198" font-size="13" fill="#52514e">Read-only: Glob, Grep,</text>
+    <text x="85" y="216" font-size="13" fill="#52514e">and file reading</text>
+
+    <line x1="85" y1="234" x2="375" y2="234" stroke="#e1e0d9" stroke-width="1"/>
+
+    <text x="85" y="258" font-size="13" font-weight="bold" fill="#0b0b0b">Loads CLAUDE.md?</text>
+    <text x="375" y="258" text-anchor="end" font-size="13" font-weight="bold" fill="#e34948">No</text>
+
+    <text x="85" y="282" font-size="13" font-weight="bold" fill="#0b0b0b">Loads git status?</text>
+    <text x="375" y="282" text-anchor="end" font-size="13" font-weight="bold" fill="#e34948">No</text>
+
+    <line x1="85" y1="300" x2="375" y2="300" stroke="#e1e0d9" stroke-width="1"/>
+
+    <text x="85" y="324" font-size="13" font-weight="bold" fill="#0b0b0b">Best for</text>
+    <text x="85" y="346" font-size="13" fill="#52514e">Codebase research, security</text>
+    <text x="85" y="364" font-size="13" fill="#52514e">review, pattern analysis,</text>
+    <text x="85" y="382" font-size="13" fill="#52514e">understanding an unfamiliar</text>
+    <text x="85" y="400" font-size="13" fill="#52514e">system</text>
+
+    <line x1="85" y1="418" x2="375" y2="418" stroke="#e1e0d9" stroke-width="1"/>
+    <text x="85" y="442" font-size="13" font-weight="bold" fill="#0b0b0b">Context footprint</text>
+    <text x="85" y="464" font-size="13" fill="#52514e">Smallest — no project</text>
+    <text x="85" y="482" font-size="13" fill="#52514e">context loaded</text>
+  </g>
+
+  <!-- CARD 2: Plan -->
+  <g>
+    <rect x="430" y="90" width="340" height="600" rx="12" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
+    <rect x="430" y="90" width="340" height="58" rx="12" fill="#eb6834"/>
+    <rect x="430" y="136" width="340" height="12" fill="#eb6834"/>
+    <text x="600" y="126" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">Plan Agent</text>
+
+    <text x="455" y="178" font-size="13" font-weight="bold" fill="#0b0b0b">Toolset</text>
+    <text x="455" y="198" font-size="13" fill="#52514e">Reasoning-focused; no</text>
+    <text x="455" y="216" font-size="13" fill="#52514e">file-modification tools</text>
+
+    <line x1="455" y1="234" x2="745" y2="234" stroke="#e1e0d9" stroke-width="1"/>
+
+    <text x="455" y="258" font-size="13" font-weight="bold" fill="#0b0b0b">Loads CLAUDE.md?</text>
+    <text x="745" y="258" text-anchor="end" font-size="13" font-weight="bold" fill="#e34948">No</text>
+
+    <text x="455" y="282" font-size="13" font-weight="bold" fill="#0b0b0b">Loads git status?</text>
+    <text x="745" y="282" text-anchor="end" font-size="13" font-weight="bold" fill="#e34948">No</text>
+
+    <line x1="455" y1="300" x2="745" y2="300" stroke="#e1e0d9" stroke-width="1"/>
+
+    <text x="455" y="324" font-size="13" font-weight="bold" fill="#0b0b0b">Best for</text>
+    <text x="455" y="346" font-size="13" fill="#52514e">Breaking a large feature</text>
+    <text x="455" y="364" font-size="13" fill="#52514e">into steps, designing</text>
+    <text x="455" y="382" font-size="13" fill="#52514e">architecture, building a</text>
+    <text x="455" y="400" font-size="13" fill="#52514e">roadmap</text>
+
+    <line x1="455" y1="418" x2="745" y2="418" stroke="#e1e0d9" stroke-width="1"/>
+    <text x="455" y="442" font-size="13" font-weight="bold" fill="#0b0b0b">Context footprint</text>
+    <text x="455" y="464" font-size="13" fill="#52514e">Small — structured</text>
+    <text x="455" y="482" font-size="13" fill="#52514e">reasoning only</text>
+  </g>
+
+  <!-- CARD 3: General-purpose -->
+  <g>
+    <rect x="800" y="90" width="340" height="600" rx="12" fill="#ffffff" stroke="#1baf7a" stroke-width="2"/>
+    <rect x="800" y="90" width="340" height="58" rx="12" fill="#1baf7a"/>
+    <rect x="800" y="136" width="340" height="12" fill="#1baf7a"/>
+    <text x="970" y="120" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">General-Purpose Agent</text>
+    <text x="970" y="138" text-anchor="middle" font-size="11" fill="#ffffff">(default when agent is omitted)</text>
+
+    <text x="825" y="178" font-size="13" font-weight="bold" fill="#0b0b0b">Toolset</text>
+    <text x="825" y="198" font-size="13" fill="#52514e">Full Claude Code toolset —</text>
+    <text x="825" y="216" font-size="13" fill="#52514e">read, write, run commands</text>
+
+    <line x1="825" y1="234" x2="1115" y2="234" stroke="#e1e0d9" stroke-width="1"/>
+
+    <text x="825" y="258" font-size="13" font-weight="bold" fill="#0b0b0b">Loads CLAUDE.md?</text>
+    <text x="1115" y="258" text-anchor="end" font-size="13" font-weight="bold" fill="#008300">Yes</text>
+
+    <text x="825" y="282" font-size="13" font-weight="bold" fill="#0b0b0b">Loads git status?</text>
+    <text x="1115" y="282" text-anchor="end" font-size="13" font-weight="bold" fill="#008300">Yes</text>
+
+    <line x1="825" y1="300" x2="1115" y2="300" stroke="#e1e0d9" stroke-width="1"/>
+
+    <text x="825" y="324" font-size="13" font-weight="bold" fill="#0b0b0b">Best for</text>
+    <text x="825" y="346" font-size="13" fill="#52514e">Implementing changes,</text>
+    <text x="825" y="364" font-size="13" fill="#52514e">running builds/tests,</text>
+    <text x="825" y="382" font-size="13" fill="#52514e">refactoring, any task that</text>
+    <text x="825" y="400" font-size="13" fill="#52514e">must modify the project</text>
+
+    <line x1="825" y1="418" x2="1115" y2="418" stroke="#e1e0d9" stroke-width="1"/>
+    <text x="825" y="442" font-size="13" font-weight="bold" fill="#0b0b0b">Context footprint</text>
+    <text x="825" y="464" font-size="13" fill="#52514e">Largest — full project</text>
+    <text x="825" y="482" font-size="13" fill="#52514e">context loaded</text>
+  </g>
+
+  <text x="600" y="730" text-anchor="middle" font-size="13" fill="#52514e" font-style="italic">Match the agent value to the skill's actual job: read-only research, structured planning, or file-modifying execution.</text>
+</svg>

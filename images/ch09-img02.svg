@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="650" fill="#fcfcfb"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="26" font-weight="bold" fill="#0b0b0b">Nested CLAUDE.md Discovery</text>
+
+  <!-- Root box -->
+  <rect x="470" y="110" width="260" height="90" rx="12" fill="#2a78d6"/>
+  <text x="600" y="148" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Project Root</text>
+  <text x="600" y="172" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">CLAUDE.md</text>
+  <text x="600" y="222" text-anchor="middle" font-size="13" fill="#52514e">Loaded at the start of every session</text>
+
+  <!-- Arrows to children -->
+  <line x1="540" y1="200" x2="300" y2="318" stroke="#52514e" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="660" y1="200" x2="900" y2="318" stroke="#52514e" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <text x="390" y="255" text-anchor="middle" font-size="12" font-style="italic" fill="#52514e">merged on demand</text>
+  <text x="810" y="255" text-anchor="middle" font-size="12" font-style="italic" fill="#52514e">merged on demand</text>
+
+  <!-- frontend box -->
+  <rect x="150" y="320" width="300" height="90" rx="12" fill="#eb6834"/>
+  <text x="300" y="358" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">frontend/</text>
+  <text x="300" y="382" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">CLAUDE.md</text>
+  <text x="300" y="435" text-anchor="middle" font-size="13" fill="#52514e">Merged in only when Claude</text>
+  <text x="300" y="453" text-anchor="middle" font-size="13" fill="#52514e">works inside frontend/</text>
+
+  <!-- backend box -->
+  <rect x="750" y="320" width="300" height="90" rx="12" fill="#1baf7a"/>
+  <text x="900" y="358" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">backend/</text>
+  <text x="900" y="382" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">CLAUDE.md</text>
+  <text x="900" y="435" text-anchor="middle" font-size="13" fill="#52514e">Merged in only when Claude</text>
+  <text x="900" y="453" text-anchor="middle" font-size="13" fill="#52514e">works inside backend/</text>
+
+  <text x="600" y="560" text-anchor="middle" font-size="14" fill="#52514e">Broader files load first; folder-specific files stack in only when Claude works in that folder.</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1200" height="760" fill="#fcfcfb"/>
+
+  <!-- title -->
+  <text x="600" y="45" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">The Four Fields of a Structured Error Context Report</text>
+
+  <!-- column headers -->
+  <text x="150" y="140" text-anchor="middle" font-size="13" fill="#52514e">Reports</text>
+  <text x="405" y="140" text-anchor="middle" font-size="13" fill="#52514e">Structured Error Report</text>
+  <text x="985" y="140" text-anchor="middle" font-size="13" fill="#52514e">Coordinator Decision</text>
+
+  <!-- Subagent (blue) -->
+  <rect x="75" y="160" width="150" height="500" rx="12" fill="#2a78d6"/>
+  <text x="150" y="400" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">Subagent</text>
+  <text x="150" y="430" text-anchor="middle" font-size="12" fill="#ffffff">Sends structured</text>
+  <text x="150" y="446" text-anchor="middle" font-size="12" fill="#ffffff">error report</text>
+
+  <!-- Field 1: What Was Attempted (orange) -->
+  <rect x="265" y="160" width="280" height="110" rx="12" fill="#eb6834"/>
+  <text x="405" y="205" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">1. What Was Attempted</text>
+  <text x="405" y="228" text-anchor="middle" font-size="13" fill="#ffffff">Tool, parameters, retries used</text>
+
+  <!-- Field 2: What Error Occurred (aqua) -->
+  <rect x="265" y="290" width="280" height="110" rx="12" fill="#1baf7a"/>
+  <text x="405" y="335" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">2. What Error Occurred</text>
+  <text x="405" y="358" text-anchor="middle" font-size="13" fill="#ffffff">Category + retriability flag</text>
+
+  <!-- Field 3: Access Failure vs. Valid Empty Result (yellow) -->
+  <rect x="265" y="420" width="280" height="110" rx="12" fill="#eda100"/>
+  <text x="405" y="458" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">3. Access Failure vs.</text>
+  <text x="405" y="478" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Valid Empty Result</text>
+  <text x="405" y="500" text-anchor="middle" font-size="13" fill="#ffffff">Confirmed absent, or never checked</text>
+
+  <!-- Field 4: Partial Results (magenta) -->
+  <rect x="265" y="550" width="280" height="110" rx="12" fill="#e87ba4"/>
+  <text x="405" y="595" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">4. Partial Results</text>
+  <text x="405" y="618" text-anchor="middle" font-size="13" fill="#ffffff">Work completed before the failure</text>
+
+  <!-- Coordinator (green) -->
+  <rect x="585" y="160" width="220" height="500" rx="12" fill="#008300"/>
+  <text x="695" y="395" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Coordinator</text>
+  <text x="695" y="420" text-anchor="middle" font-size="13" fill="#ffffff">Combines the full</text>
+  <text x="695" y="438" text-anchor="middle" font-size="13" fill="#ffffff">report into one</text>
+  <text x="695" y="456" text-anchor="middle" font-size="13" fill="#ffffff">decision</text>
+
+  <!-- Decision 1: Retry (violet) -->
+  <rect x="845" y="160" width="280" height="110" rx="12" fill="#4a3aa7"/>
+  <text x="985" y="205" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Retry</text>
+  <text x="985" y="228" text-anchor="middle" font-size="13" fill="#ffffff">Knows what's already been tried</text>
+
+  <!-- Decision 2: Escalate (violet) -->
+  <rect x="845" y="290" width="280" height="110" rx="12" fill="#4a3aa7"/>
+  <text x="985" y="330" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Escalate</text>
+  <text x="985" y="350" text-anchor="middle" font-size="13" fill="#ffffff">Non-retriable failure needs</text>
+  <text x="985" y="368" text-anchor="middle" font-size="13" fill="#ffffff">a fix or a human</text>
+
+  <!-- Decision 3: Accept as Final (violet) -->
+  <rect x="845" y="420" width="280" height="110" rx="12" fill="#4a3aa7"/>
+  <text x="985" y="465" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Accept as Final</text>
+  <text x="985" y="488" text-anchor="middle" font-size="13" fill="#ffffff">Valid empty result confirmed</text>
+
+  <!-- Decision 4: Route (violet) -->
+  <rect x="845" y="550" width="280" height="110" rx="12" fill="#4a3aa7"/>
+  <text x="985" y="590" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Route</text>
+  <text x="985" y="610" text-anchor="middle" font-size="13" fill="#ffffff">Send the unfinished portion</text>
+  <text x="985" y="628" text-anchor="middle" font-size="13" fill="#ffffff">elsewhere; reuse the rest</text>
+
+  <!-- arrows: Subagent -> Fields -->
+  <line x1="225" y1="215" x2="263" y2="215" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="225" y1="345" x2="263" y2="345" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="225" y1="475" x2="263" y2="475" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="225" y1="605" x2="263" y2="605" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- arrows: Fields -> Coordinator -->
+  <line x1="545" y1="215" x2="583" y2="215" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="545" y1="345" x2="583" y2="345" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="545" y1="475" x2="583" y2="475" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="545" y1="605" x2="583" y2="605" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- arrows: Coordinator -> Decisions -->
+  <line x1="805" y1="215" x2="843" y2="215" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="805" y1="345" x2="843" y2="345" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="805" y1="475" x2="843" y2="475" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="805" y1="605" x2="843" y2="605" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- footer note -->
+  <text x="600" y="720" text-anchor="middle" font-size="14" fill="#52514e">Each field answers a distinct question; together they let the coordinator decide instead of guessing.</text>
+</svg>

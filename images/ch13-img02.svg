@@ -1,0 +1,46 @@
+<svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="650" fill="#fcfcfb"/>
+
+  <text x="600" y="45" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Three Non-Match Categories Reduce False Positives</text>
+
+  <!-- Box 1: Acceptable Patterns -->
+  <rect x="50" y="100" width="340" height="170" rx="12" fill="#2a78d6"/>
+  <text x="80" y="136" font-size="17" font-weight="bold" fill="#ffffff">ACCEPTABLE PATTERNS</text>
+  <text x="80" y="164" font-size="14" fill="#ffffff">Looks like an issue,</text>
+  <text x="80" y="184" font-size="14" fill="#ffffff">but is intentional/harmless</text>
+  <text x="80" y="214" font-size="13" fill="#ffffff">e.g., temp loop variable,</text>
+  <text x="80" y="234" font-size="13" fill="#ffffff">state-machine handler</text>
+
+  <!-- Box 2: Scope Exclusions -->
+  <rect x="430" y="100" width="340" height="170" rx="12" fill="#eb6834"/>
+  <text x="460" y="136" font-size="17" font-weight="bold" fill="#ffffff">SCOPE EXCLUSIONS</text>
+  <text x="460" y="164" font-size="14" fill="#ffffff">Ruled out of review</text>
+  <text x="460" y="184" font-size="14" fill="#ffffff">entirely, regardless of look</text>
+  <text x="460" y="214" font-size="13" fill="#ffffff">e.g., naming style,</text>
+  <text x="460" y="234" font-size="13" fill="#ffffff">brace placement</text>
+
+  <!-- Box 3: Edge Case Handling -->
+  <rect x="810" y="100" width="340" height="170" rx="12" fill="#1baf7a"/>
+  <text x="840" y="136" font-size="17" font-weight="bold" fill="#ffffff">EDGE CASE HANDLING</text>
+  <text x="840" y="164" font-size="14" fill="#ffffff">Genuinely ambiguous —</text>
+  <text x="840" y="184" font-size="14" fill="#ffffff">fits neither match nor non-match</text>
+  <text x="840" y="214" font-size="13" fill="#ffffff">e.g., nullable field,</text>
+  <text x="840" y="234" font-size="13" fill="#ffffff">"unclear" enum value</text>
+
+  <!-- Converging arrows -->
+  <line x1="220" y1="270" x2="470" y2="438" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="270" x2="600" y2="438" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="980" y1="270" x2="730" y2="438" stroke="#52514e" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Bottom outcome box -->
+  <rect x="320" y="440" width="560" height="140" rx="12" fill="#eda100"/>
+  <text x="600" y="483" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">LOWER FALSE-POSITIVE RATE</text>
+  <text x="600" y="513" text-anchor="middle" font-size="14" fill="#ffffff">Closes the gap that vague, confidence-based</text>
+  <text x="600" y="535" text-anchor="middle" font-size="14" fill="#ffffff">instructions could never fix</text>
+</svg>

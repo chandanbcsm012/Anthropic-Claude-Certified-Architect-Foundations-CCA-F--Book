@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="700" fill="#fcfcfb"/>
+
+  <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#0b0b0b">Inline Execution vs. Context Fork Execution</text>
+
+  <text x="300" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#52514e">Without Context Fork</text>
+  <text x="900" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#52514e">With Context Fork</text>
+
+  <!-- LEFT PANEL: everything stays in one thread -->
+  <rect x="60" y="100" width="480" height="580" rx="12" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+  <rect x="90" y="120" width="240" height="40" rx="10" fill="#2a78d6"/>
+  <text x="210" y="145" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Main Conversation</text>
+
+  <rect x="90" y="180" width="420" height="46" rx="12" fill="#eb6834"/>
+  <text x="300" y="208" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Skill Execution (Inline)</text>
+  <line x1="300" y1="226" x2="300" y2="246" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- exploratory noise, all inside main conversation -->
+  <rect x="90" y="248" width="420" height="42" rx="12" fill="#1baf7a"/>
+  <text x="300" y="274" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Tool Call: Grep</text>
+  <line x1="300" y1="290" x2="300" y2="300" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="90" y="302" width="420" height="42" rx="12" fill="#1baf7a"/>
+  <text x="300" y="328" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">File Read: auth.ts</text>
+  <line x1="300" y1="344" x2="300" y2="354" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="90" y="356" width="420" height="42" rx="12" fill="#1baf7a"/>
+  <text x="300" y="382" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Search Attempt (dead end)</text>
+  <line x1="300" y1="398" x2="300" y2="408" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="90" y="410" width="420" height="42" rx="12" fill="#1baf7a"/>
+  <text x="300" y="436" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Reasoning / Retry</text>
+  <line x1="300" y1="452" x2="300" y2="462" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="90" y="464" width="420" height="42" rx="12" fill="#1baf7a"/>
+  <text x="300" y="490" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">File Read: session.ts</text>
+
+  <text x="300" y="545" text-anchor="middle" font-size="13" fill="#52514e" font-style="italic">All exploratory noise stays visible in the thread</text>
+  <text x="300" y="568" text-anchor="middle" font-size="13" fill="#52514e" font-style="italic">Conversation grows long and hard to scan</text>
+
+  <!-- RIGHT PANEL: work forked out, only summary returns -->
+  <rect x="690" y="115" width="420" height="60" rx="12" fill="#2a78d6"/>
+  <text x="900" y="140" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Main Conversation</text>
+  <text x="900" y="160" text-anchor="middle" font-size="12" fill="#ffffff">Skill invoked</text>
+
+  <line x1="900" y1="175" x2="900" y2="210" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="945" y="197" font-size="12" fill="#52514e">forks</text>
+
+  <rect x="690" y="210" width="420" height="315" rx="12" fill="#ffffff" stroke="#eda100" stroke-width="2"/>
+  <rect x="710" y="228" width="290" height="38" rx="10" fill="#eda100"/>
+  <text x="855" y="252" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Forked Subagent (Isolated)</text>
+
+  <rect x="710" y="280" width="380" height="36" rx="12" fill="#1baf7a"/>
+  <text x="900" y="303" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Tool Call: Grep</text>
+  <line x1="900" y1="316" x2="900" y2="324" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="710" y="326" width="380" height="36" rx="12" fill="#1baf7a"/>
+  <text x="900" y="349" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">File Read: auth.ts</text>
+  <line x1="900" y1="362" x2="900" y2="370" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="710" y="372" width="380" height="36" rx="12" fill="#1baf7a"/>
+  <text x="900" y="395" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Search Attempt (dead end)</text>
+  <line x1="900" y1="408" x2="900" y2="416" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="710" y="418" width="380" height="36" rx="12" fill="#1baf7a"/>
+  <text x="900" y="441" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Reasoning / Retry</text>
+
+  <text x="900" y="500" text-anchor="middle" font-size="12" fill="#52514e" font-style="italic">Stays inside the subagent's box — never seen by the main thread</text>
+
+  <line x1="900" y1="525" x2="900" y2="558" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="955" y="545" font-size="12" fill="#52514e">returns</text>
+
+  <rect x="750" y="558" width="300" height="50" rx="12" fill="#e87ba4"/>
+  <text x="900" y="588" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Condensed Summary</text>
+
+  <line x1="900" y1="608" x2="900" y2="630" stroke="#52514e" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <rect x="690" y="630" width="420" height="50" rx="12" fill="#2a78d6"/>
+  <text x="900" y="660" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">Main Conversation Resumes</text>
+</svg>
